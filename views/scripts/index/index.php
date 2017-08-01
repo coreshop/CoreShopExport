@@ -1,0 +1,2 @@
+
+CoreShopExport Plugin works!
