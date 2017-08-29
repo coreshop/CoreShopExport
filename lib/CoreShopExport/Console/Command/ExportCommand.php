@@ -2,10 +2,14 @@
 
 namespace CoreShopExport\Console\Command;
 
+use CoreShopExport\Export\AssetExport;
 use CoreShopExport\Export\CarrierExport;
+use CoreShopExport\Export\CategoryExport;
 use CoreShopExport\Export\CountryExport;
 use CoreShopExport\Export\CurrencyExport;
 use CoreShopExport\Export\ExportInterface;
+use CoreShopExport\Export\ManufacturerExport;
+use CoreShopExport\Export\ProductExport;
 use CoreShopExport\Export\ShippingRuleExport;
 use CoreShopExport\Export\StateExport;
 use CoreShopExport\Export\StoreExport;
@@ -39,7 +43,11 @@ class ExportCommand extends AbstractCommand
             StoreExport::class,
             TaxRateExport::class,
             TaxRuleGroupExport::class,
-            StateExport::class
+            StateExport::class,
+            ManufacturerExport::class,
+            CategoryExport::class,
+            ProductExport::class,
+            AssetExport::class
         ];
 
         $this->output->writeln('<info>Found '.count($exports).' ExportDefinitions to run</info>');
